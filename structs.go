@@ -1074,6 +1074,11 @@ type Role struct {
 	// This is a combination of bit masks; the presence of a certain permission can
 	// be checked by performing a bitwise AND between this int and the permission.
 	Permissions int64 `json:"permissions,string"`
+        
+ 	Tags        struct {
+		BotID string `json:"bot_id"`
+	} `json:"tags"`
+
 }
 
 // Mention returns a string which mentions the role
